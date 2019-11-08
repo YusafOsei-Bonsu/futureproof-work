@@ -1,0 +1,47 @@
+body {
+    background-color: green;
+}
+
+table {
+    background-color: yellow;
+    border: 2px solid red;
+}
+
+table, th, td {
+    border: 2px solid rgb(255,20,147);
+    border-collapse: collapse;
+}
+
+td {
+    color: blue;
+}
+
+table > th {
+    font-weight: bold;
+}
+
+div {
+    color: blanchedalmond;
+}
+
+#one {
+    text-decoration: underline;
+}
+
+div h3 {
+    text-align: right;
+}
+
+div > h3 {
+    text-align: center;
+}
+
+[class="body"] {
+    background-color: darkorchid;
+}
+
+/* Button becomes yellow upon being hovered over */
+button:hover {
+    /* background-color: yellow; */
+    cursor:pointer;
+}

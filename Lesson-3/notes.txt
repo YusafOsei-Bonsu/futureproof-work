@@ -1,0 +1,14 @@
+DEPLOYMENT
+==========
+ICANN (Internet Corporation for Assigned Names & Numbers) are the people that sell URLs and URIs to Internet Providers.
+
+ICANN > DNS Providers > Consumer (me)
+
+WhoIs is a lookup tool that provides information about a domain.
+
+GDPR regulations are local laws of Europe. Need to gain consent and legit business case for collecting 
+personal data. 
+
+FRAMEWORK
+=========
+A supporting structure for something. 

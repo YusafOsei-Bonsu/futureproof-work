@@ -1,0 +1,7 @@
+echo "# Lesson-4" >> README.md
+git init
+New-Item -Path 'README.md' -ItemType File
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/YusafOsei-Bonsu/Lesson-4.git
+git push -u origin master

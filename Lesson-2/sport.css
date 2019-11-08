@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.manUtdImage {
+    height: auto;
+    max-width: 100%;
+}
+
+body {
+    background-color: red;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+    color: yellow;
+}
+
+.center {
+    margin-left: auto;
+	margin-right: auto;
+}
+
+table, th, td {
+    border: 2px solid white;
+}
+
+#title {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.column {
+    float: left;
+}
+
+.left, .right {
+    width: 25%;
+}
+  
+.middle {
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+#link:hover {
+    color: yellow;
+}
+
+#link:link {
+    color: white;
+}

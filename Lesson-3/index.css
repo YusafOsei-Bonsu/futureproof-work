@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+body {
+    /* background-image: linear-gradient(white, black); */
+    background-color: lightgray;
+}
+
+#title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    padding-bottom: 20px; 
+    padding-top: 20px;
+}
+
+#applePieParagraph {
+    margin: 20px 140px 0px 150px;
+    text-align: justify;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

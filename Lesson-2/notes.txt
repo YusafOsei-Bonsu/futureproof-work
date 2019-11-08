@@ -1,0 +1,14 @@
+Position Property
+=================
+Static: Every elements fills the space it requires. However, if there's a left/right/top/bottom/z-index set then
+there'll be no effect on that element.
+
+Relative: An element's original position remains in the flow of the document, fills the space it needs. However,
+we can adjust the position on the page using the top, bottom, left and right properties.
+
+Absolute: The element is removed from the flow of the document and other elements will behave as if it's not
+even there whilst all the other positional properties will work on it. 
+
+Grid Layout
+===========
+If you're going to use Flex box, the parent container needs to be of the flex model too. 
