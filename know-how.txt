@@ -1,1 +1,3 @@
-- "Remove-Item -Recurse -Force .git" This undone init git; thereby, rendering a folder without git.
+1) "Remove-Item -Recurse -Force .git" 
+
+This undone init git; thereby, rendering a folder without git.
