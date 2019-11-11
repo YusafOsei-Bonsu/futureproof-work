@@ -1,0 +1,20 @@
+Building blocks
+===============
+programming principles: Data, Action, Logic
+
+Data: Raw facts and figures.
+
+Information: Data with context/meaning.
+
+Session: Temporary storage of data in your browser/server. Sessions can last from minutes to months.
+
+Action: A process to do something.
+
+Logic: Using data/Information to make a decision.
+
+Algorithm: A set of unambiguous steps to solve a problem. In terms of programming, algorithms take the form of software/programs.
+A good algorithm is simple, clean and efficient. Good algorithms also conclude to correct/expected outcome.
+
+Defensive programming: Checks upfront for data types, etc. 
+
+TDD, BDD.
