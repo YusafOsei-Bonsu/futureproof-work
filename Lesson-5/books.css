@@ -1,0 +1,36 @@
+.header {
+    font-family: 'Work Sans', sans-serif;
+    font-weight:800;
+    Font-Size: 44px;
+    text-transform: uppercase;
+    padding: 20px 0px;
+
+  }
+
+.container{
+    justify-content: space-evenly;
+}
+
+  p {
+    Font-Family: 'Open Sans', Sans-Serif;
+    Font-Size: 15px;
+  }
+  
+  h2 {Font-Family: 'Raleway', Sans-Serif;
+    Font-Size: 30px;
+    color: #cc0029;
+    text-transform: uppercase;
+  
+  }
+
+  img{
+      height: 250px;
+  }
+
+  footer{
+    padding: 100px 0px;
+  }
+
+  .btn{
+      align: center;
+  }
