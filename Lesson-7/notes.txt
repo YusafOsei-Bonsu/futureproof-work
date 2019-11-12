@@ -1,0 +1,12 @@
+SOLID
+=====
+SOLID is a mnemonic acronym for 5 design principles to make software design more understandable, flexible and maintainable.
+Single responsibility: A class should have one responsibility. 
+Open-closed: Software entities... should be open for extension and closed for modification.
+Liskov Substitution: Replace an instance of the same class with another instance of the same class without adverse effects.
+Interface segregation: "Many client-specific interfaces are better than one general-purpose principles".
+Dependency inversion: "Depend on abstractions, not concretions".
+
+jQuery
+======
+jQuery is a JS library.
