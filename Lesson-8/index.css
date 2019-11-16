@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+.flex-container {
+    display: flex;
+}
+
+body {
+    width: 99%;
+    height: 600px;
+}
+
+main {
+    height: 100%;
+    padding: 10px 20px;
+}
+
+input, label, textarea {
+    margin-bottom: 20px;
+}
+
+label, textarea {
+    margin-left: 20px;
+}
+
+section {
+    width: 60%;
+    flex-direction: column;
+    border: 2px solid magenta;
+    margin: 4px;
+    align-items: center;
+}
+
+header > h1 {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 40px;
+}
+
+aside {
+    width: 30%;
+    border: 2px solid seagreen;
+    margin: 4px;
+}
+
+footer {
+    height: 100px;
+    width: 89%;
+    border: 2px solid black;
+    margin: 10px 20px 20px 20px;
+}
+
+button {
+    padding: 4px;
+    width: 21%;
+}
+
+#btn-2 {
+    margin-top: 20px;
+    display: none;
+}
+
+button:hover {
+    background-color: darkgray;
+    cursor: pointer;
+    color: white;
+}
+
+#male-radio-button, #female-radio-button, #other-radio-button {
+    margin-left: 20px;
+}
+
+#submit-btn {
+    margin-left: 20px;
+    padding: 4px;
+}

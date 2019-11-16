@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <title>Homepage | Cards</title>
+</head>
+<body>
+    <h1>Celebration Card Generator</h1>
+    <main>
+        <form action="/showCard" method="POST">
+            <div>
+                <!-- A textbox where you enter your first and second name -->
+                <label for="fullname">Name: </label><input name="fullname" id="name" type="text" placeholder="Enter your name here..">
+            </div>
+            <div>
+                <label for="greeting">Greeting: </label><input name="greeting" id="greet" type="text" placeholder="Enter your greeting here..">
+            </div>
+            <div>
+                <!-- The dropdown box containing events as options -->
+                <label for="events">Events: </label>
+                <select name="events">
+                    <option value="birthday">Birthday</option>
+                    <option value="easter">Easter</option>
+                    <option value="valentines">Valentine's Day</option>
+                    <option value="christmas">Christmas</option>
+                    <option value="halloween">Halloween</option>
+                </select>
+            </div>
+            <div>
+                <label for="msg">Message: </label>
+            </div>
+            <div>
+                <!-- The textarea that contains the message -->
+                <textarea name="msg" id="message-box" cols="30" rows="10">
+
+                </textarea>
+            </div>
+            <div>
+                <!-- Submit button -->
+                <input id="submitBtn" type="submit" value="Create Card">
+            </div>
+        </form>
+    </main>
+</body>
+</html>

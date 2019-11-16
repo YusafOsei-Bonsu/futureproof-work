@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+body {
+    background-color: rgb(30,144,255);
+}
+/* Parent element (main) adopts a flex model */
+main {
+    display: flex;
+    border: 2px solid black;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Every element in the form gets a padding of 4px except submit btn */
+form > div:not(:last-child) {
+    padding: 4px;
+}
+
+/* Submit button */
+#submitBtn {
+    margin-top: 10px;
+    margin-left: 4px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 235px;
+}
+
+/* Cursor changes when hovering over submit button to */
+#submitBtn:hover {
+    cursor: pointer;
+}
+
+/* Pressing the submit button will change its background and text colour to indicate the button being pressed  */
+#submitBtn:active {
+    background-color: rgb(105,105,105);
+    border-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}

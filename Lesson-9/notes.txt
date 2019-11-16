@@ -1,0 +1,17 @@
+Objectives
+----------
+1. Create a website that consumes data from an external api
+2. Understand the concept and use of promises.
+3. Describe the difference between async and sync.
+4. Create async function.
+5. Write error handling for async function.
+
+Promise
+-------
+Promise: The guarantee an outcome will happen.
+
+Promise states: 
+---------------
+    Pending (hasn't been fulfilled/rejected yet)
+    Settled (Resolved or rejected)
+    
