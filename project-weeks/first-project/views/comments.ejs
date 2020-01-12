@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Comments | The Best Anonymous Journaling Website</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Latest Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/comments.css" />
+</head>
+
+<body>
+  <!-- Navigational bar -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <img id="logo" src="assets/logo.png" alt="Inblognito logo">
+    <h5>InBlogNito</h5>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <form action="/" method="get"><button type="submit">Home</button></form>
+      </li>
+      <li class="nav-item">
+        <form action="/postPage" method="get"><button type="submit">Write a Post</button></form>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="flex-container">
+    <div><h1><%= entry.title %></h1></div>
+    <div><h3><em><%= `By ${entry.author}` %></em></h3></div>
+    <div><p><%= `${entry.entry}` %></p></div>
+    <div><img src=" <%= entry.gif %> " alt="Gif"  width="400px" height="400px"></div>
+    <form action="/addComment" method="post" class="flex-container">
+      <h3 class="center">Add a Comment</h3>
+      <input type="text" name="comment" id="comment" placeholder="Write your comment here..">
+      <input type="hidden" name="entryID" value="<%= `${id}`%>">
+      <button class="btn btn-primary" type="submit">Submit Comment</button>
+    </form>
+    <h3 class="center">Comments</h3>
+    <div id="commentList">
+      <!-- If the entry has no comments... -->
+      <% if (entry.comments.length == 0 || entry.comments.length === undefined) { %>
+        <!-- An empty div will appear -->
+        <p>No comments have been made..</p>
+      <% } else { %>
+        <!-- Otherwise, display the comment(s) -->
+          <% for (let comment of entry.comments) { %>
+            <hr>
+            <%= comment %>
+          <% } %> 
+      <% } %>
+    </div>
+  </main>
+</body>
+</html>

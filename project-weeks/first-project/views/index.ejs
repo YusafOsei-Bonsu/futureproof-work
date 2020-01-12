@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Homepage | The Best Anonymous Journaling Website</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Latest Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body>
+  <!-- Navigational bar -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <img id="logo" src="assets/logo.png" alt="Inblognito logo">
+    <h5>InBlogNito</h5>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <form><button style="color: rgb(255, 255, 255, .9);">Home</button></form>
+      </li>
+      <li class="nav-item">
+        <form action="/postPage" method="get"><button type="submit">Write a Post</button></form>
+      </li>
+    </ul>
+  </nav>
+
+  <div name="sectionOne" class="jumbotron jumbotron-fluid" style="background-image: url(https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80); background-size: cover;"><h1 id="pageTitle">Anonymous journal  writing <br>and sharing made easy.</h1></div>
+
+  <div class="flexContainer">
+    <!-- Presents all blog entries -->
+    <% for (const ID of Object.keys(entries)) { %>
+    <div name="entry">
+      <form action="/blogpage" method="POST">
+        <h1><%= entries[ID].title %></h1><br>
+        <!-- if the user has provided their name... -->
+        <% if (entries[ID].author) { %>
+          <!-- it appears. -->
+        <em><%= `By ${entries[ID].author}` %></em> <br>
+        <% } else { %>
+          <!-- "By anonymous blogger" is presented -->
+        <em><%= `By anonymous blogger` %></em> <br>
+        <% } %>
+        <br>
+        <p><%= `"${entries[ID].entry}"` %></p>     
+        <% if ((entries[ID]).hasOwnProperty('gif')) { %> 
+        <img src=" <%= entries[ID].gif %> " alt='a gif' width="200px" height="200px"> <% } %>
+      </form>
+      <div id="emojiBox">
+        <form id="emojiForm" method="post" action="/emoji">
+          <div id="emojis">
+            <!-- Like emoji -->
+            <input id="likeBtn" type="radio" name="emoji" value="like">
+              <label for="likeBtn"><img src="assets/like.png" alt="Like"></label>
+                <p><%= entries[ID].reactions["like"] %></p>
+            <!-- Dislike emoji -->
+            <input id="dislikeBtn" type="radio" name="emoji" value="dislike">
+              <label ><img src="assets/dislike.png" alt="Dislike"></label>
+                <p><%= entries[ID].reactions["dislike"] %></p>
+            <!-- Love emoji -->
+            <input id="loveBtn" type="radio" name="emoji" value="love">
+              <label><img src="assets/love.png" alt="Love"></label>
+                <p><%= entries[ID].reactions["love"] %></p>
+            <!-- Happy emoji -->
+            <input id="happyBtn" type="radio" name="emoji" value="happy">
+              <label><img id="happyEmoji" src="assets/happy.png" alt="Happy"></label>
+                <p><%= entries[ID].reactions["happy"] %></p>
+            <!-- Sad emoji -->
+            <input id="sadBtn" type="radio" name="emoji" value="sad">
+              <label><img src="assets/sad.png" alt="Sad"></label>
+                <p><%= entries[ID].reactions["sad"] %></p>
+            <input type="hidden" name="entryID" id="entryID" value="<%= `${ID}` %>"><br>
+          </div> 
+          <button type="submit" class="btn btn-primary">Submit Emoji</button>
+        </form> 
+      </div>
+      <form action="/commentsPage" method="GET">
+        <input type="hidden" name="entryID" id="entryID" value="<%= `${ID}` %>"><br>
+        <button type="submit" class="btn btn-dark">Add/Read Comments</button>
+      </form>
+    </div>
+    <% } %>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <!-- JS -->
+  <script src="script/index.js"></script>
+    <footer></footer>
+  </body>
+</html>
