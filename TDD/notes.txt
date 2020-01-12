@@ -1,0 +1,11 @@
+Unit test: Testing a line of code. Much faster because the focus is on individual lines of code. More isolated. 
+
+Service test: Testing a code block that represents functionality (e.g. button). This kind of test is of medium-speed. 
+
+UI test: User interaction tests (e.g. clicking, pokey-pokey, "wow that looks awful"). Some automated tests, but human tests as well.  This kind of test is slow. 
+
+TDD CYCLE
+=========
+Write a failing test > Make the test pass > Refactor code 
+        ^                                           |
+        |___________________________________________|
