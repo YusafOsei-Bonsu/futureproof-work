@@ -1,0 +1,53 @@
+1) All artists, titles of their review and the score for the review...
+
+SELECT title AS 'Review Title', artist AS 'Artist', score AS 'Review Score' 
+FROM reviews
+ORDER BY score DESC;
+
+2) All artists, titles of their review and the score for the review where the score is over 9...
+
+SELECT title AS 'Review Title', artist AS 'Artist', score AS 'Review Score' 
+FROM reviews
+WHERE score > 9
+ORDER BY score DESC;
+
+3) A count of reviews where the score is over 9...
+
+SELECT COUNT(*) AS 'Total Number of Reviews with a Score of 9 or More'
+FROM reviews
+WHERE score > 9;
+
+4) An average of the scores each year...
+
+SELECT year AS 'Year', ROUND(AVG(score), 2) AS 'Average Score'
+FROM reviews INNER JOIN years
+ON reviews.reviewid=years.reviewid
+GROUP BY year
+HAVING year IS NOT NULL
+ORDER BY year DESC;
+
+5) The title of all of the albums that were self released...
+
+SELECT title AS 'Albums'
+FROM reviews INNER JOIN labels
+ON reviews.reviewid = labels.reviewid
+WHERE label = 'self-released';
+
+6) The name of the artist, the date of publication and the genre of all the albums...
+
+SELECT DISTINCT reviews.artist, reviews.pub_date, genres.genre
+FROM reviews INNER JOIN genres
+ON reviews.reviewid=genres.reviewid;
+
+7) Content of the reviews for all rock albums...
+
+SELECT content.content 
+FROM content INNER JOIN genres
+ON content.reviewid = genres.reviewid
+WHERE genres.genre = 'rock';
+
+8) All reviews that contain the word "music" in their content (return reviewid)
+
+SELECT reviewid 
+FROM content
+WHERE content LIKE '%music%';
