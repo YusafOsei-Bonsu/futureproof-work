@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+header {
+  background-color: rgb(255, 255, 255);
+  display: block;
+  box-sizing: border-box;
+}
+
+header ul {
+  display: inline-block;
+  width: 100%;
+}
+
+header > ul > li {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  width: 48%;
+}
+
+#todoapp {
+  text-align: left;
+  font-weight: bold;
+  color: rgb(0, 0, 255);
+  font-size: 25px;
+}
+
+#homepage {
+  text-align: right;
+  font-size: 25px;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+div[class="card-body"] {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 30px;
+  color: rgb(0, 0, 255);
+}
+
+div[class="card"] {
+  width: 320px;
+  height: fit-content;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border: "2px solid black";
+  margin-top: 20px;
+  box-shadow: 10px 10px 8px #888888;
+}
+
+#userTodos {
+  list-style-type: none;
+  display: table;
+  margin: 0 auto;
+}
+
+#userTodos li {
+  font-size: 18px;
+  margin-top: 25px;
+}
+
+.checked {
+  font-size: 5em;
+  color:red;
+  text-decoration: line-through;
+}

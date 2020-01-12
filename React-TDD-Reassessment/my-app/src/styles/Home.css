@@ -1,0 +1,39 @@
+#flex-container {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid rgb(0, 0, 0);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h1 {
+    margin-top: 20;
+    text-decoration: "underline";
+    text-align: "center";
+}
+
+img {
+    width: 100%;
+}
+
+form {
+    margin-left: 20px;
+}
+
+#form-container {
+    border: 2px solid blue; 
+    width: 100%;
+}
+
+input[type="text"] {
+    width: 50%; 
+    margin-top: 10px; 
+}
+
+Link, input[type="submit"] {
+    width: 50%;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+}
