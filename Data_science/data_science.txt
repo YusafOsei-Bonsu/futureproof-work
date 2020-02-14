@@ -1,0 +1,35 @@
+What is Data Science?
+=====================
+Data Science is the study of data that involves recording, storing and analyzing data to extract useful information.
+    - Goal: Gain insights & knowledge from any data type (structured or unstructured)
+
+We can use data science to describe past-event data to predict future. 
+
+Process
+=======
+1) Source
+    - Where?
+    - Correct/Relevant?
+
+2) Clean: Good to do regardless
+
+3) Model: Digital representation of the data/situation (created using existing data)
+
+4) Evaluate: Evaluate accuracy of produced model.
+
+5) Repeat: Process is repeated to refine the model
+
+6) Deploy: Use it in an application, as a lib/module/package or as a product (depending on use case)
+
+Models
+======
+
+Machine Learning (ML)
+=====================
+ML is the study of algorithms/stats models that computer systems to perform a specific task without instruction (relies on inferences and patterns).
+
+Supervised Learning: We give our program a dataset that's labelled with a predictable output (e.g. we're trying to determine if a visitor to our website is a bot or human)e.g.
+
+Unsupervised Learning: We give our program a dataset, we don't know what we're looking for but we'd like our algorithm to create categories of pieces of data.
+
+Reinforcement Learning: We provide our program with an environment to work within and a goal to maximise/minimise.
